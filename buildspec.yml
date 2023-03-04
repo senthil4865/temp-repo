@@ -6,9 +6,6 @@ phases:
       nodejs: 16 # (1)
     commands:
       - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin  # (2)
-  pre_build:
-    commands:
-      - npm install # (3)
   build:
     commands:
       - docker build -t senthil4861/temp . # (5)
